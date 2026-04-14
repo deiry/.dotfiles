@@ -1,3 +1,4 @@
+unsetopt WARN_CREATE_GLOBAL
 # Path to Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
 

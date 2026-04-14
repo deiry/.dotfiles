@@ -11,6 +11,7 @@ brew "bat"
 brew "eza"
 brew "zoxide"
 brew "tmux"
+brew "git-delta"
 
 # Apps
 cask "visual-studio-code"
