@@ -1,0 +1,29 @@
+# Prompt format
+format = """
+[╭─](bold green)$directory$git_branch$git_status$nodejs$python$rust
+[╰─](bold green)$character"""
+
+[directory]
+style = "bold blue"
+truncation_length = 3
+
+[git_branch]
+symbol = " "
+style = "bold purple"
+
+[git_status]
+ahead = "⇡${count}"
+behind = "⇣${count}"
+modified = "!${count}"
+untracked = "?${count}"
+staged = "+${count}"
+
+[nodejs]
+symbol = " "
+
+[python]
+symbol = " "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
