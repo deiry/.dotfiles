@@ -16,16 +16,19 @@ fi
 
 # Zsh plugins
 ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
-declare -A plugins=(
-  [zsh-autosuggestions]="https://github.com/zsh-users/zsh-autosuggestions"
-  [zsh-syntax-highlighting]="https://github.com/zsh-users/zsh-syntax-highlighting"
-  [fast-syntax-highlighting]="https://github.com/zdharma-continuum/fast-syntax-highlighting"
-  [zsh-autocomplete]="https://github.com/marlonrichert/zsh-autocomplete"
-)
-for name in "${!plugins[@]}"; do
-  dir="$ZSH_CUSTOM/plugins/$name"
-  [ ! -d "$dir" ] && git clone --depth=1 "${plugins[$name]}" "$dir"
-done
+
+clone_plugin() {
+  local name=$1
+  local url=$2
+  local dir="$ZSH_CUSTOM/plugins/$name"
+  [ ! -d "$dir" ] && git clone --depth=1 "$url" "$dir"
+}
+
+clone_plugin "zsh-autosuggestions" "https://github.com/zsh-users/zsh-autosuggestions"
+clone_plugin "zsh-syntax-highlighting" "https://github.com/zsh-users/zsh-syntax-highlighting"
+clone_plugin "fast-syntax-highlighting" "https://github.com/zdharma-continuum/fast-syntax-highlighting"
+clone_plugin "zsh-autocomplete" "https://github.com/marlonrichert/zsh-autocomplete"
+
 
 # SSH config
 mkdir -p ~/.ssh
