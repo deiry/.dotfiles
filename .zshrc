@@ -18,6 +18,8 @@ export PATH="$HOME/.local/bin:$PATH"
 # Python PATH
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 eval "$(starship init zsh)"
+export UV_PYTHON=python3.11
+export UV_PROJECT_ENVIRONMENT=.venv
 
 # Zoxide (smarter cd)
 eval "$(zoxide init zsh)"
@@ -62,3 +64,7 @@ alias python='python3'
 alias pip='pip3'
 alias venv='source .venv/bin/activate'
 
+# Jupyter kernels
+alias kernel-list='jupyter kernelspec list'
+alias kernel-remove='jupyter kernelspec remove'
+alias kernel-add='python -m ipykernel install --user --name'
