@@ -51,6 +51,10 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gco='git checkout'
 
+
 # Dotfiles quick edit
 alias dotfiles='cd ~/.dotfiles'
 alias zshrc='nvim ~/.dotfiles/.zshrc'
+
+alias python='python3'
+alias pip='pip3'
