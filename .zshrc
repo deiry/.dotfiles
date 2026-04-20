@@ -15,6 +15,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Starship prompt
 export PATH="$HOME/.local/bin:$PATH"
+# Python PATH
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 eval "$(starship init zsh)"
 
 # Zoxide (smarter cd)
@@ -58,3 +60,5 @@ alias zshrc='nvim ~/.dotfiles/.zshrc'
 
 alias python='python3'
 alias pip='pip3'
+alias venv='source .venv/bin/activate'
+
